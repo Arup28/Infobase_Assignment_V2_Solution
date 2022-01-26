@@ -38,3 +38,12 @@ Here we have used **SortedDictionary** for storing record in sorted order.
 			File.WriteAllLines(@"Resources\uniques.txt", sortedUniqueKeysAndValues.Keys);
 			File.WriteAllLines(@"Resources\fullwords.txt", sortedUniqueKeysAndValues.Values);
 ```
+
+_**It is possible to solve the above task for a significantly larger “words.txt” dictionary in under 0.01 seconds. 
+If you wish to respond to this bonus question, please describe an alternate solution that could run in 10 milliseconds. An executable sample is not required for the bonus question.  **_
+
+- Split the larger words.txt into smaller files and then apply the sequencing logic. As reading large text file might take additional overheads.
+- Use SortedHashTable for sorting sorted data. 
+- Implement partition sort for sorting across the page.
+- Merge the results at the end.
+

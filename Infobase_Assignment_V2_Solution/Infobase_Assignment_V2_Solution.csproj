@@ -12,6 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Resources\Instructions.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\words.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

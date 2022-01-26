@@ -6,6 +6,7 @@
 	{
 		try
 		{
+			var watch = System.Diagnostics.Stopwatch.StartNew();
 			SortedDictionary<string, string> sortedUniqueKeysAndValues = new();
 			foreach (string line in File.ReadLines(@"Resources\words.txt"))
 			{
@@ -28,6 +29,8 @@
 			}
 			File.WriteAllLines(@"Resources\uniques.txt", sortedUniqueKeysAndValues.Keys);
 			File.WriteAllLines(@"Resources\fullwords.txt", sortedUniqueKeysAndValues.Values);
+			watch.Stop();
+			Console.WriteLine("Elapsed Time in Milliseconds: " + watch.ElapsedMilliseconds);
 		}
 		catch(Exception ex)
         {
